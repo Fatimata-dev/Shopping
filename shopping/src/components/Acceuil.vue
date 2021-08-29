@@ -15,7 +15,7 @@
                       <span>{{product.price}}€</span>
                     </div>
                       <div class="action">
-                        <button>
+                        <button @click="favorie(product)">
                       <i class="far fa-heart"></i>
                       </button>
                       <button @click="addToCart(product)">
@@ -46,6 +46,7 @@
         return product.description.toLowerCase().includes(this.searchKey.toLowerCase());
       });
     },
+    
      
     
      
@@ -58,6 +59,16 @@
           description: product.description,
           price: product.price,
           quantity: 1
+        })
+      },
+      favorie(product){
+        this.$store.dispatch('addToFavori',{
+          payload:{
+            id:product.id,
+            img:product.img,
+            description:product.description,
+            price:product.price
+          }
         })
       }
     }, 
