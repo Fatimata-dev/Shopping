@@ -10,11 +10,11 @@
               
                 
                 <ul>
-                    <li>
+                    <!-- <li>
                     <router-link to="/user">
                        <i class="fas fa-user"></i>
                     </router-link>
-                    </li>
+                    </li> -->
                     <li>
                     <router-link to="/favories">
                         <i class="far fa-heart"></i>
